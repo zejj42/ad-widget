@@ -1,0 +1,100 @@
+#header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+#divider-line {
+  width: 100%;
+  background-color: black;
+}
+
+#left-header,
+#right-header {
+  font-size: 24px;
+}
+
+#arrow {
+  font-size: 32px;
+  color: blue;
+}
+
+.recommendation-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 19%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.recommendation-item img {
+  height: 162px;
+}
+
+#recommendation-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recommendation-caption {
+  font-size: 14px;
+  height: 42px;
+  padding: 0 0 6px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 6px 0;
+}
+
+.recommendation-source {
+  margin: 0;
+  height: 14px;
+  font-size: 12px;
+  color: grey;
+}
+
+@media only screen and (min-width: 1201px) {
+  #recommendation-container {
+    justify-content: space-between;
+  }
+
+  .recommendation-item {
+    width: 19%;
+  }
+  .recommendation-item img {
+    height: 270px;
+  }
+  .recommendation-caption {
+    font-size: 16px;
+  }
+  .recommendation-source {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  #recommendation-container {
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .recommendation-item {
+    max-width: 240px;
+    width: calc(100% - 20px);
+  }
+
+  .recommendation-item img {
+    height: 240px;
+  }
+
+  .recommendation-caption {
+    max-height: 54px;
+  }
+}
