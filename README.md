@@ -20,8 +20,6 @@ AD-WIDGET is a flexible and dynamic recommendations widget designed to seamlessl
 
 - Recommendation Types: Currently supports organic and sponsored recommendations. Built with the flexibility to easily introduce new recommendation types in the future.
 
-- Customizable Display: Widget appearance, including headers and recommendation containers, is adjustable via the display.js module.
-
 - Efficient and Robust: Implements retries in fetching recommendations and has robust error handling to ensure consistent data retrieval and display, even during network or data issues.
 
 ## Requirements
@@ -105,12 +103,13 @@ AD-WIDGET is a flexible and dynamic recommendations widget designed to seamlessl
 
 ## Testing
 
-The project is built with a strong foundation of extensive unit tests to ensure reliability and robustness. Each module's functionality is encapsulated with its own set of tests to maintain the highest standard of quality. The tests cover functionality, reliability, and usage scenarios to safeguard against unexpected behavior.
+The project is built with a strong foundation of extensive unit tests to ensure reliability and robustness. Each module's functionality is encapsulated with its own set of tests. The tests cover functionality, reliability, and usage scenarios to safeguard against unexpected behavior.
 
 ## Continuous Integration
 
-The project utilizes GitHub workflow actions to streamline the development process. With rules that enforce testing upon each push to the repo, it guarantees consistent code quality and reduces the chances of integration issues, ensuring a smooth deployment process. Additionally, the workflows leverage GitHub secrets for secure handling of sensitive information during the CI process.
+- The project utilizes GitHub workflow actions to streamline the development process. With rules that enforce testing upon each push to the repo, it guarantees consistent code quality and reduces the chances of integration issues, ensuring a smooth deployment process.
+- Additionally, the workflows leverage GitHub secrets for secure handling of sensitive information during the CI process.
 
 ## Note on Configuration Files
 
-For the purposes of this assignment and to facilitate ease of setup, the .env file within the server directory has been uploaded to GitHub. It's important to understand that in a professional or real-world environment, sensitive configuration files like .env should never be committed to public repositories for security reasons. This action was taken solely for the convenience of this assignment's requirements.
+For the purposes of this assignment and to facilitate ease of setup, the .env file within the server directory has been uploaded to GitHub. It's important to understand that in a professional or real-world environment, sensitive configuration files like .env should never be committed to public repositories for security reasons.
