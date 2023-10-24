@@ -26,7 +26,7 @@ class RecommendationBase {
 
   async createRecommendationDiv() {
     const { thumbnail, caption } = this.recommendation;
-    const { defaultImageSrc, maxCaptionLength, priority, displayRecOnFail } =
+    const { defaultImageSrc, priority, displayRecOnFail } =
       this.publisherInstance;
 
     const recommendationDiv = document.createElement("div");
@@ -39,7 +39,7 @@ class RecommendationBase {
       defaultImageSrc
     );
 
-    addCaption(recommendationDiv, caption, maxCaptionLength);
+    addCaption(recommendationDiv, caption);
     this.applyStyles(recommendationDiv);
 
     if (didRecImgFail && !displayRecOnFail) return null;

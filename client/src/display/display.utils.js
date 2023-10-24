@@ -15,18 +15,18 @@ export const addThumbnail = async (father, value, fallbackSrc) => {
   return didRecImgFail;
 };
 
-const addParagraphItem = (father, value, maxLength, className) => {
+const addParagraphItem = (father, value, className) => {
   const item = document.createElement("p");
   item.textContent = value;
   item.classList.add(className);
   father.appendChild(item);
 };
 
-export const addCaption = (father, value, maxLength) =>
-  addParagraphItem(father, value, maxLength, CAPTION_CLASS);
+export const addCaption = (father, value) =>
+  addParagraphItem(father, value, CAPTION_CLASS);
 
 export const addSource = (father, value) =>
-  addParagraphItem(father, value, null, SOURCE_CLASS);
+  addParagraphItem(father, value, SOURCE_CLASS);
 
 const addOpenLink = (isNewTab, linkUrl) => {
   return () => {

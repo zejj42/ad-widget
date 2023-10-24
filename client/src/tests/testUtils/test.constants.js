@@ -116,7 +116,7 @@ export const MOCK_PUBLISHER_INSTANCE = {
   totalRecs: 4,
   displayRecOnFail: true,
   defaultImageSrc:
-    "https://www.wpbeginner.com/wp-content/uploads/2017/08/fallbackthumbnail.png",
+    "https://www.shepherdsearchgroup.com/wp-content/themes/shepherd/images/no-image-found-360x250.png",
   recsDesktop: 4,
   recsMobile: 2,
   maxCaptionLength: 100,
