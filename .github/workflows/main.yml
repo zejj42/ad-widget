@@ -1,6 +1,6 @@
-name: Server Tests
+name: Client Tests
 
-on: [push, pull_request]
+on: push
 
 jobs:
   test:
@@ -14,14 +14,14 @@ jobs:
         with:
           node-version: 14
 
-      - name: Install dependencies
+      - name: Install client dependencies
         run: |
-          cd server
+          cd client
           npm ci
 
-      - name: Run tests
+      - name: Run client tests
         run: |
-          cd server
+          cd client
           npm test
         env:
           YOUR_ENV_VAR: ${{ secrets.API_NAME }}
