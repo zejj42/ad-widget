@@ -89,11 +89,9 @@ AD-WIDGET is a flexible and dynamic recommendations widget designed to seamlessl
    http-server
    ```
 
-4. Run the http server:
+4. Open the http server:
 
-   ```bash
-   open client on http://127.0.0.1:8080
-   ```
+   [Click here to access the server](http://127.0.0.1:8080)
 
 ## Design Philosophy
 
