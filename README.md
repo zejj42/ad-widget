@@ -8,6 +8,7 @@ AD-WIDGET is a flexible and dynamic recommendations widget designed to seamlessl
 - [Requirements](#requirements)
 - [Installation and Usage](#installation-&-usage)
 - [Design Philosophy](#design-philosophy)
+- [Testing](#testing)
 
 ## Features
 
@@ -101,3 +102,11 @@ AD-WIDGET is a flexible and dynamic recommendations widget designed to seamlessl
 - Separation of Concerns: Clear demarcation of responsibilities is maintained. For instance, fetching functionalities are distinct from display functionalities.
 
 - Fallback Mechanisms: The application consistently offers a smooth user experience by providing fallback options for missing or erroneous data.
+
+## Testing
+
+The project is built with a strong foundation of extensive unit tests to ensure reliability and robustness. Each module's functionality is encapsulated with its own set of tests to maintain the highest standard of quality. The tests cover functionality, reliability, and usage scenarios to safeguard against unexpected behavior.
+
+## Continuous Integration
+
+The project utilizes GitHub workflow actions to streamline the development process. With rules that enforce testing upon each push to the repo, it guarantees consistent code quality and reduces the chances of integration issues, ensuring a smooth deployment process.
