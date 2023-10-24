@@ -66,7 +66,7 @@ AD-WIDGET is a flexible and dynamic recommendations widget designed to seamlessl
 3. Run the server:
 
    ```bash
-       node server.js
+   node server.js
    ```
 
 #### Client-side
