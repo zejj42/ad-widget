@@ -117,9 +117,7 @@ export const MOCK_PUBLISHER_INSTANCE = {
   displayRecOnFail: true,
   defaultImageSrc:
     "https://www.shepherdsearchgroup.com/wp-content/themes/shepherd/images/no-image-found-360x250.png",
-  recsDesktop: 4,
-  recsMobile: 2,
-  maxCaptionLength: 100,
+
   priority: "medium",
   themeColor: "#fff",
   textColor: "#000",
@@ -133,7 +131,7 @@ export const MOCK_API_INSTANCE = {
   baseUrl: "recommendations.get",
   appType: "desktop",
   apiKey: "someApiKey",
-  count: 5,
+  count: 4,
   listProperty: "list",
   typeProperty: "origin",
 };

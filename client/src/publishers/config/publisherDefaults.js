@@ -5,13 +5,10 @@ import FONTS from "../../constants/fonts.js";
 export const DEFAULT_PUBLISHER_OPTIONS = {
   publisherId: "taboola-templates",
   retries: 3,
-  totalRecs: 4,
+  totalRecs: 10,
   displayRecOnFail: true,
   defaultImageSrc:
     "https://www.shepherdsearchgroup.com/wp-content/themes/shepherd/images/no-image-found-360x250.png",
-  recsDesktop: 4,
-  recsMobile: 2,
-  maxCaptionLength: 100,
   priority: "medium",
   themeColor: COLORS.white,
   textColor: COLORS.black,

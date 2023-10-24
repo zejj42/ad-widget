@@ -42,12 +42,6 @@ export const addLinkClick = (element, linkUrl, isNewTab) => {
   element.addEventListener("click", openLink);
 };
 
-export const getRecommendationsCount = (publisherInstance) => {
-  return window.innerWidth <= 768
-    ? publisherInstance.recsMobile
-    : publisherInstance.recsDesktop;
-};
-
 const setStyle =
   (element) =>
   ([attribute, value]) => {

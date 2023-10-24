@@ -7,7 +7,7 @@ export class TestApi extends ApiBase {
       baseUrl: "recommendations.get",
       appType: "desktop",
       apiKey: "f9040ab1b9c802857aa783c469d0e0ff7e7366e4",
-      count: 5,
+      count: 10,
       listProperty: "list",
       typeProperty: "origin",
     });

@@ -13,20 +13,26 @@ const fetchRecommendationsConfig = {
     "Content-Type": "application/json",
   },
 };
-const getUrlParams = (apiInstance) => {
+const getUrlParams = (apiInstance, publisherTotalRecs) => {
   const { appType, apiKey, count } = apiInstance;
   return {
     "app.type": appType,
     "app.apikey": apiKey,
-    count: count,
+    count: publisherTotalRecs || count,
     "source.type": "video",
     "source.id": "demo",
   };
 };
 
-export const getFetchRecommendationsEndpoint = (apiInstance, publisherId) => {
+export const getFetchRecommendationsEndpoint = (
+  apiInstance,
+  publisherId,
+  publisherTotalRecs
+) => {
   const baseUrl = apiInstance.baseUrl;
-  const params = new URLSearchParams(getUrlParams(apiInstance));
+  const params = new URLSearchParams(
+    getUrlParams(apiInstance, publisherTotalRecs)
+  );
   return `${SERVER_BASE_URL}/api/${publisherId}/${baseUrl}?${params}`;
 };
 
@@ -43,8 +49,16 @@ const handleFetch = async (url, config) => {
   return response.json();
 };
 
-const fetchSingleAttempt = async (apiInstance, publisherId) => {
-  const endPoint = getFetchRecommendationsEndpoint(apiInstance, publisherId);
+const fetchSingleAttempt = async (
+  apiInstance,
+  publisherId,
+  publisherTotalRecs
+) => {
+  const endPoint = getFetchRecommendationsEndpoint(
+    apiInstance,
+    publisherId,
+    publisherTotalRecs
+  );
   const data = await handleFetch(endPoint, fetchRecommendationsConfig);
   return data?.[apiInstance.listProperty];
 };
@@ -62,10 +76,18 @@ const handleFetchError = (error, attempt, maxAttempts) => {
   }
 };
 export const fetchRecommendations = async (apiInstance, publisherInstance) => {
-  const { publisherId, retries } = publisherInstance;
+  const {
+    publisherId,
+    totalRecs: publisherTotalRecs,
+    retries,
+  } = publisherInstance;
   for (let i = 0; i < retries; i++) {
     try {
-      const data = await fetchSingleAttempt(apiInstance, publisherId);
+      const data = await fetchSingleAttempt(
+        apiInstance,
+        publisherId,
+        publisherTotalRecs
+      );
       return validateOrReturnFetchData(data);
     } catch (error) {
       handleFetchError(error, i, retries);
