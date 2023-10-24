@@ -9,6 +9,8 @@ AD-WIDGET is a flexible and dynamic recommendations widget designed to seamlessl
 - [Installation and Usage](#installation-&-usage)
 - [Design Philosophy](#design-philosophy)
 - [Testing](#testing)
+- [Continuous Integration](#continuous-integration)
+- [Note on Configuration Files](#note-on-configuration-files)
 
 ## Features
 
